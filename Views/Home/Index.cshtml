@@ -1,0 +1,12 @@
+﻿@model InterviewPractice.Sites.MVC.Models.CompanyModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="home-container">
+    @foreach (var item in Model.Companies)
+    {
+        <div>
+            @Html.ActionLink(item.Name, item.Id.ToString(), "Company")
+        </div>
+    }
+</div>

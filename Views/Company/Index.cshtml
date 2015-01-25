@@ -1,0 +1,14 @@
+﻿@model InterviewPractice.Sites.MVC.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    @foreach(var e in Model.Employees)
+    {
+        <div>
+            @Html.ActionLink(e.LastName + "," + e.FirstName, e.Id.ToString(), "Employee" ) 
+        </div>
+    }
+</div>
